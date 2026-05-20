@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { RiCloseCircleFill } from "react-icons/ri";
+import { IoIosAdd } from "react-icons/io";
 function Navbar() {
+    const [manu,setmanu]=useState(false);
   return (
     <>
     <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 shadow-md'>
@@ -11,17 +14,20 @@ function Navbar() {
                 </h1>
             </div>
             <div>
-                <ul className='flex space-x-8 text-lg'>
+                <ul className='hidden md:flex space-x-6 text-lg'>
                     <li className='cursor-pointer'>Home</li>
                     <li className='cursor-pointer'>About</li>
                     <li className='cursor-pointer'>Portfolio</li>
                     <li className='cursor-pointer'>Experiances</li>
                     <li className='cursor-pointer'>Contacts </li>
                 </ul>
+                <div onClick={()=>setmanu(!manu)}>
+                    {manu ? <RiCloseCircleFill /> : <IoIosAdd />}
+                </div>
             </div>
         </div>
-        <div>
-               <ul className='flex space-x-8 text-lg'>
+        <div className=''>
+               <ul className='md:hidden'>
                     <li className='cursor-pointer'>Home</li>
                     <li className='cursor-pointer'>About</li>
                     <li className='cursor-pointer'>Portfolio</li>
