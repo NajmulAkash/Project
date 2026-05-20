@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { RiCloseCircleFill } from "react-icons/ri";
-import { IoIosAdd } from "react-icons/io";
+import { FiMenu } from "react-icons/fi";
+import { IoIosClose } from "react-icons/io";
 function Navbar() {
     const [manu,setmanu]=useState(false);
   return (
@@ -22,7 +22,7 @@ function Navbar() {
                     <li className='cursor-pointer'>Contacts </li>
                 </ul>
                 <div onClick={()=>setmanu(!manu)}>
-                    {manu ? <RiCloseCircleFill /> : <IoIosAdd />}
+                    {manu ? <FiMenu /> : <IoIosClose />}
                 </div>
             </div>
         </div>
